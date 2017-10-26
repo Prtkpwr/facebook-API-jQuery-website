@@ -1,207 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-        <meta charset="utf-8">
-        <title>Jquery Website</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link href="assets/css/facebook.css" rel="stylesheet">
-    </head>
-    
-    <body>
-        
-        <div class="wrapper">
-			<div class="box">
-					
-					
-				  
-					<!-- main right col -->
-					<div class="column col-sm-12 col-xs-12" id="main">
-						
-						<!-- top nav -->
-					<div class="topnav nav" id="myTopnav">
-  <a href="#home" class="profile">Profile</a>
-  <a href="#news"class="feeds">Feed</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navFunction()">&#9776;</a>
-</div>
-						<!-- /top nav -->
-					  
-						<div class="padding">
-							<div class="full col-sm-12">
-							  
-								<!-- content -->                      
-								<div class="row">
-								  
-								 <!-- main col left --> 
-								 <div class="col-sm-5 col-md-6">
-								   
-									  <div class="1 panel panel-default"> <!-- Profile Pic -->
-										<div class="panel-thumbnail"><img class="img-responsive proPic"></div>
-										<div class="panel-body">
-									
-										  
-										  <p>
-					 <!-- Name -->						<span id="myName"></span>
-										  </p>
-                                            
-										</div>
-									  </div>
-
-       <!-- Basic Info -->
-									  <div class="2 panel panel-default">
-										<div class="panel-heading"> <h4>Basic Information</h4></div>
-										  <div class="panel-body">
-											<div class="list-group">
-											 First Name:<input type="text" id="firstName" class="list-group-item">
-											 Last Name:<input type="text" id="lastName" class="list-group-item">
-											 Email ID:<input type="text" id="myEmail" class="list-group-item">
-											</div>
-										  </div>
-									  </div>
-                     <!-- BAsic Info End -->
-                    <!-- feed1 -->
-									  <div class="feed1 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story1"></a>
-                                         <br/>
-                                        <a class="fPhoto1"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed1 End -->
-                                     <!-- feed2 -->
-									  <div class="feed2 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story2"></a>
-                                         <br/>
-                                        <a class="fPhoto2"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed2 End -->
-                                 
-                                      <!-- feed5 -->
-									  <div class="feed5 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story5"></a>
-                                        <br/>
-                                        <a class="fPhoto5"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed5 End -->
-                                     
-                     
-								   
-									
-									 
-								  </div> <!-- End of Main col left-->
-								  
-								  <!-- main col right -->
-								  <div class="col-sm-6">
-									   		<!-- Cover Photo -->							
-									   <div class="3 panel panel-default">
-										<div class="panel-thumbnail"><img class="img-responsive coverPic"></div>
-									  </div>
-                                      <!-- Cover Photo End-->
-									
-										<div class="4 panel panel-default">
-										<div class="panel-heading"> <h4>Family & Friends</h4></div>
-										  <div class="panel-body">
-											<div class="list-group">
-											 Family :<input type="text" id="family" class="list-group-item">
-                                             Relationship Status :<input type="text" id="rStatus" class="list-group-item">
-											</div>
-										  </div>
-									  </div>
-                                       <!--Personal Info-->
-								   
-									  <div class="5 panel panel-default">
-										<div class="panel-heading"> <h4>Personal Information</h4></div>
-										  <div class="panel-body">
-											<div class="list-group">
-											 Gender :<input type="text" id="myGender" class="list-group-item">
-											 Date of Birth :<input type="text" id="myBirthdate" class="list-group-item">
-											 HomeTown :<input type="text" id="myHometown" class="list-group-item">
-											</div>
-										  </div>
-									  </div>
-                            <!--Personal Info End-->
-                                      <!-- feed3 -->
-									  <div class="feed3 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story3"></a>
-                                         <br/>
-                                        <a class="fPhoto3"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed3 End -->
-                                      <!-- feed4 -->
-									  <div class="feed4 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story4"></a>
-                                         <br/>
-                                        <a class="fPhoto4"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed4 End -->
-                                   
-                                      <!-- feed6 -->
-									  <div class="feed6 panel panel-default">
-										  
-									<div class="col-sm-12 col-md-12">
-                                        <a id="story6"></a>
-                                         <br/>
-                                        <a class="fPhoto6"></a>
-                                        
-											
-										  </div>
-									  </div>
-                     <!-- feed6 End -->
-
-								  </div>
-							   </div><!--/row-->
-							   
-							</div><!-- /col-9 -->
-						</div><!-- /padding -->
-					</div>
-					<!-- /main -->
-                
-      
-             
-                
-				  
-				</div><!-- end box-->
-			</div><!-- end wrapper-->
-
-        <script>
-function navFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-        
-</body></html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>Jquery Website</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <link href="assets/css/facebook.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="box">
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-12" id="main">
+               <!-- top nav -->
+               <div class="topnav nav" id="myTopnav">
+                  <a href="#home" class="profile">Profile</a>
+                  <a href="#news"class="feeds">Feed</a>
+                  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navFunction()">&#9776;</a>
+               </div>
+               <!-- /top nav -->
+               <div class="padding">
+                  <div class="full col-sm-12">
+                     <!-- content -->                      
+                     <div class="row">
+                        <!-- main col left --> 
+                        <div class="col-sm-5 col-md-6">
+                           <div class="1 panel panel-default">
+                              <!-- Profile Pic -->
+                              <div class="panel-thumbnail"><img class="img-responsive proPic"></div>
+                              <div class="panel-body">
+                                 <p>
+                                    <!-- Name -->						<span id="myName"></span>
+                                 </p>
+                              </div>
+                           </div>
+                           <!-- Basic Info -->
+                           <div class="2 panel panel-default">
+                              <div class="panel-heading">
+                                 <h4>Basic Information</h4>
+                              </div>
+                              <div class="panel-body">
+                                 <div class="list-group">
+                                    First Name:<input type="text" id="firstName" class="list-group-item">
+                                    Last Name:<input type="text" id="lastName" class="list-group-item">
+                                    Email ID:<input type="text" id="myEmail" class="list-group-item">
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- BAsic Info End -->
+                           <!-- feed1 -->
+                           <div class="feed1 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story1"></a>
+                                 <br/>
+                                 <a class="fPhoto1"></a>
+                              </div>
+                           </div>
+                           <!-- feed1 End -->
+                           <!-- feed2 -->
+                           <div class="feed2 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story2"></a>
+                                 <br/>
+                                 <a class="fPhoto2"></a>
+                              </div>
+                           </div>
+                           <!-- feed2 End -->
+                           <!-- feed5 -->
+                           <div class="feed5 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story5"></a>
+                                 <br/>
+                                 <a class="fPhoto5"></a>
+                              </div>
+                           </div>
+                           <!-- feed5 End -->
+                        </div>
+                        <!-- End of Main col left-->
+                        <!-- main col right -->
+                        <div class="col-sm-6">
+                           <!-- Cover Photo -->							
+                           <div class="3 panel panel-default">
+                              <div class="panel-thumbnail"><img class="img-responsive coverPic"></div>
+                           </div>
+                           <!-- Cover Photo End-->
+                           <div class="4 panel panel-default">
+                              <div class="panel-heading">
+                                 <h4>Family & Friends</h4>
+                              </div>
+                              <div class="panel-body">
+                                 <div class="list-group">
+                                    Family :<input type="text" id="family" class="list-group-item">
+                                    Relationship Status :<input type="text" id="rStatus" class="list-group-item">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--Personal Info-->
+                           <div class="5 panel panel-default">
+                              <div class="panel-heading">
+                                 <h4>Personal Information</h4>
+                              </div>
+                              <div class="panel-body">
+                                 <div class="list-group">
+                                    Gender :<input type="text" id="myGender" class="list-group-item">
+                                    Date of Birth :<input type="text" id="myBirthdate" class="list-group-item">
+                                    HomeTown :<input type="text" id="myHometown" class="list-group-item">
+                                 </div>
+                              </div>
+                           </div>
+                           <!--Personal Info End-->
+                           <!-- feed3 -->
+                           <div class="feed3 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story3"></a>
+                                 <br/>
+                                 <a class="fPhoto3"></a>
+                              </div>
+                           </div>
+                           <!-- feed3 End -->
+                           <!-- feed4 -->
+                           <div class="feed4 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story4"></a>
+                                 <br/>
+                                 <a class="fPhoto4"></a>
+                              </div>
+                           </div>
+                           <!-- feed4 End -->
+                           <!-- feed6 -->
+                           <div class="feed6 panel panel-default">
+                              <div class="col-sm-12 col-md-12">
+                                 <a id="story6"></a>
+                                 <br/>
+                                 <a class="fPhoto6"></a>
+                              </div>
+                           </div>
+                           <!-- feed6 End -->
+                        </div>
+                     </div>
+                     <!--/row-->
+                  </div>
+                  <!-- /col-9 -->
+               </div>
+               <!-- /padding -->
+            </div>
+            <!-- /main -->
+         </div>
+         <!-- end box-->
+      </div>
+      <!-- end wrapper-->
+      <script>
+         function navFunction() {
+             var x = document.getElementById("myTopnav");
+             if (x.className === "topnav") {
+                 x.className += " responsive";
+             } else {
+                 x.className = "topnav";
+             }
+         }
+      </script>
+      <script type="text/javascript" src="assets/js/jquery.js"></script>
+      <script type="text/javascript" src="assets/js/app.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+   </body>
+</html>
