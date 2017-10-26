@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var myFacebookToken = 'EAACEdEose0cBAFZBmfxUUjhflWRfzhWeA4WbQJ8jvGZCwEoG9eoPYJN6s3TRe2wHDfhe8zdla3ZB3CxLGGPTO5g2nbkOLu9ud6FkYc1On8pSqW1l0v8L3IRNILdIO8PUpZAvxnNsyuDNz1Cz5ssSvCF5dPs7ev0RZBZBIMsDNZBqm82Gtmm5cR1lcZCSRBdevSwZD'; //enter you facebook API token here
+    var myFacebookToken = ''; //enter you facebook API token here
 
 
     /* AJAX call for Profile info */
