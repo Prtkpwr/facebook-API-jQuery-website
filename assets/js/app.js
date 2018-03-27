@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var myFacebookToken = ''; //enter you facebook API token here
+    let myFacebookToken = ''; //enter you facebook API token here
 
 
     /* AJAX call for Profile info */
@@ -8,22 +8,22 @@ $(document).ready(function() {
 
             success: function(response) {
 
-                $("#myHometown").val(response.hometown.name);
+                $("#myHometown").val(response.hometown.name || "hometown unavailable");
                 $(".proPic").attr("src", "" + response.picture.data.url + "");
-                $("#firstName").val(response.first_name);
+                $("#firstName").val(response.first_name || "name not available");
                 $("#lastName").val(response.last_name);
-                $("#myName").html("<h3>" + response.name + "</h3>");
-                $("#myEmail").val(response.email);
-                $("#myHomeTown").text(response.hometown.name);
-                $("#myGender").val(response.gender);
-                $("#myBirthdate").val(response.birthday);
-                $("#rStatus").val(response.relationship_status);
-                $(".coverPic").attr("src", "" + response.cover.source + "");
-                var family = response.family.data;
-                var getName = $.map(family, function(i) {
+                $("#myName").html("<h3>" + response.name || "not available " + "</h3>" || "not available ");
+                $("#myEmail").val(response.email || "not available ");
+                $("#myHomeTown").text(response.hometown.name || "not available ");
+                $("#myGender").val(response.gender || "not available ");
+                $("#myBirthdate").val(response.birthday || "not available ");
+                $("#rStatus").val(response.relationship_status || "not available ");
+                $(".coverPic").attr("src", "" + response.cover.source + "" || "not available ");
+                let family = response.family.data;
+                let getName = $.map(family, function(i) {
                     return i.name;
                 });
-                $("#family").val(getName);
+                $("#family").val(getName || "not available ");
 
 
             }, // end success function
@@ -43,15 +43,15 @@ $(document).ready(function() {
 
     $.ajax("https://graph.facebook.com/me?fields=posts{type,full_picture,story,message,source},name&access_token=" + myFacebookToken, {
         success: function(response) {
-            var feedData = response.posts.data;
-            var feeds = $.map(feedData, function(value, index) {
+            let feedData = response.posts.data;
+            let feeds = $.map(feedData, function(value, index) {
                 if (index <= 5) { //for limiting 6 feeds
                     return value;
                 }
             });
           
             //first feed starts here
-            var feed1 = $.map(feeds, function(value, index) {
+            let feed1 = $.map(feeds, function(value, index) {
                 if (index == 0) {
                     return value;
                 }
@@ -72,7 +72,7 @@ $(document).ready(function() {
             //first feed ends here
 
             //second feed starts here
-            var feed2 = $.map(feeds, function(value, index) {
+            let feed2 = $.map(feeds, function(value, index) {
                 if (index == 1) {
                     return value;
                 }
@@ -93,7 +93,7 @@ $(document).ready(function() {
             //second feed ends here
 
             //third feed starts here
-             var feed3 = $.map(feeds, function(value, index) {
+             let feed3 = $.map(feeds, function(value, index) {
                 if (index == 2) {
                     return value;
                 }
@@ -114,7 +114,7 @@ $(document).ready(function() {
             //third feed ends here
 
             //fourth feed starts here
-            var feed4 = $.map(feeds, function(value, index) {
+            let feed4 = $.map(feeds, function(value, index) {
                 if (index == 3) {
                     return value;
                 }
@@ -135,7 +135,7 @@ $(document).ready(function() {
             //fourth feed ends here
 
             //fifth feed starts here
-            var feed5 = $.map(feeds, function(value, index) {
+            let feed5 = $.map(feeds, function(value, index) {
                 if (index == 4) {
                     return value;
                 }
@@ -156,7 +156,7 @@ $(document).ready(function() {
             //fifth feed ends here
 
             //sixth feed starts here
-            var feed6 = $.map(feeds, function(value, index) {
+            let feed6 = $.map(feeds, function(value, index) {
                 if (index == 5) {
                     return value;
                 }
